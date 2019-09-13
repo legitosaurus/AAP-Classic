@@ -2,8 +2,8 @@ AAPClassic.QL = {}
 if (tonumber(string.sub(AAPClassic.Build, 1,1)) > 2) then
 	--return
 end
-		
-		
+
+
 function AAPClassic.MakeQuestList()
 
 
@@ -15,8 +15,8 @@ function AAPClassic.MakeQuestList()
 	AAPClassic.GroupQuestFrame:EnableMouse(true)
 	AAPClassic.GroupQuestFrame:SetFrameStrata("LOW")
 	AAPClassic.GroupQuestFrame:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
-	AAPClassic.GroupQuestFrame:SetBackdrop( { 
-			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+	AAPClassic.GroupQuestFrame:SetBackdrop( {
+			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
 			edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
 			tile = true, tileSize = 10, edgeSize = 10, insets = { left = 2, right = 2, top = 2, bottom = 2 }
 		});
@@ -69,7 +69,7 @@ function AAPClassic.MakeQuestList()
 	AAPClassic.GroupQuestFrame.Button1ntex = AAPClassic.GroupQuestFrame.Button1:CreateTexture()
 	AAPClassic.GroupQuestFrame.Button1ntex:SetTexture("Interface/Buttons/UI-Panel-Button-Up")
 	AAPClassic.GroupQuestFrame.Button1ntex:SetTexCoord(0, 0.625, 0, 0.6875)
-	AAPClassic.GroupQuestFrame.Button1ntex:SetAllPoints()	
+	AAPClassic.GroupQuestFrame.Button1ntex:SetAllPoints()
 	AAPClassic.GroupQuestFrame.Button1:SetNormalTexture(AAPClassic.GroupQuestFrame.Button1ntex)
 	AAPClassic.GroupQuestFrame.Button1htex = AAPClassic.GroupQuestFrame.Button1:CreateTexture()
 	AAPClassic.GroupQuestFrame.Button1htex:SetTexture("Interface/Buttons/UI-Panel-Button-Highlight")
@@ -94,7 +94,7 @@ function AAPClassic.MakeQuestList()
 	AAPClassic.GroupQuestFrame.Button2ntex = AAPClassic.GroupQuestFrame.Button2:CreateTexture()
 	AAPClassic.GroupQuestFrame.Button2ntex:SetTexture("Interface/Buttons/UI-Panel-Button-Up")
 	AAPClassic.GroupQuestFrame.Button2ntex:SetTexCoord(0, 0.625, 0, 0.6875)
-	AAPClassic.GroupQuestFrame.Button2ntex:SetAllPoints()	
+	AAPClassic.GroupQuestFrame.Button2ntex:SetAllPoints()
 	AAPClassic.GroupQuestFrame.Button2:SetNormalTexture(AAPClassic.GroupQuestFrame.Button2ntex)
 	AAPClassic.GroupQuestFrame.Button2htex = AAPClassic.GroupQuestFrame.Button2:CreateTexture()
 	AAPClassic.GroupQuestFrame.Button2htex:SetTexture("Interface/Buttons/UI-Panel-Button-Highlight")
@@ -147,8 +147,8 @@ function AAPClassic.MakeQuestList()
 			AAPClassic.QL.QButtonFrame.isMoving = false;
 		end
 	end)
-	AAPClassic.QL.QButtonFrame:SetBackdrop( { 
-			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+	AAPClassic.QL.QButtonFrame:SetBackdrop( {
+			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
 			edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
 			tile = true, tileSize = 10, edgeSize = 10, insets = { left = 2, right = 2, top = 2, bottom = 2 }
 		});
@@ -162,7 +162,7 @@ function AAPClassic.MakeQuestList()
 		AAPClassic.QL.QButtonFrame["Buttonntex"] = AAPClassic.QL.QButtonFrame["Button"]:CreateTexture()
 		AAPClassic.QL.QButtonFrame["Buttonntex"]:SetTexture("Interface/Buttons/UI-Panel-Button-Highlight")
 		AAPClassic.QL.QButtonFrame["Buttonntex"]:SetTexCoord(0, 0.625, 0, 0.6875)
-		AAPClassic.QL.QButtonFrame["Buttonntex"]:SetAllPoints()	
+		AAPClassic.QL.QButtonFrame["Buttonntex"]:SetAllPoints()
 		AAPClassic.QL.QButtonFrame["Button"]:SetNormalTexture("Interface/Buttons/UI-Panel-Button-Highlight")
 		AAPClassic.QL.QButtonFrame["Buttonhtex"] = AAPClassic.QL.QButtonFrame["Button"]:CreateTexture()
 		AAPClassic.QL.QButtonFrame["Buttonhtex"]:SetTexture("Interface/Buttons/UI-Panel-Button-Highlight")
@@ -213,8 +213,8 @@ function AAPClassic.MakeQuestList()
 
 		AAPClassic.QL.QuestFrames[CLi]:SetHeight(20)
 		AAPClassic.QL.QuestFrames[CLi]:SetPoint("BOTTOMLEFT", AAPClassic.QL.ListFrame, "BOTTOMLEFT",0,-((CLi * 20)+CLi))
-		AAPClassic.QL.QuestFrames[CLi]:SetBackdrop( { 
-			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+		AAPClassic.QL.QuestFrames[CLi]:SetBackdrop( {
+			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
 			edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
 			tile = true, tileSize = 10, edgeSize = 10, insets = { left = 2, right = 2, top = 2, bottom = 2 }
 		});
@@ -250,7 +250,7 @@ function AAPClassic.MakeQuestList()
 
 
 	end
-	
+
 end
 
 AAPClassic.QL.QuestListEventFrame = CreateFrame("Frame")
@@ -261,6 +261,7 @@ AAPClassic.QL.QuestListEventFrame:SetScript("OnEvent", function(self, event, ...
 		local arg1, arg2, arg3, arg4, arg5 = ...;
 		if (arg1 == "AAP-Classic") then
 			AAPClassic.MakeQuestList()
+			AAPClassic.QuestListLoadin = 1
 		end
 	end
 end)

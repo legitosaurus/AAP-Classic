@@ -9,6 +9,7 @@ lib\LibStub\LibStub.lua
 lib\CallbackHandler-1.0\CallbackHandler-1.0.xml
 lib\HereBeDragons\HereBeDragons-2.0.lua
 lib\HereBeDragons\HereBeDragons-Pins-2.0.lua
+Localization.lua
 Core.lua
 Arrow.lua
 OptionsPanel.lua
